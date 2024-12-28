@@ -1,0 +1,1 @@
+I'm using Tailwind CSS v3.3.3 and I'm having issues with the `@apply` directive. Specifically, I'm trying to apply a utility class that uses `text-opacity` within a `@apply` directive, but the opacity is not being applied. Here's the code:
