@@ -1,0 +1,22 @@
+The issue seems to stem from how `@apply` handles nested directives or the combination of `text-opacity` with other classes. A possible workaround is to define the style directly within the class itself, rather than relying on `@apply`:
+
+```css
+.custom-text-class {
+  @apply text-gray-500; /* Example */
+  opacity: 0.5;
+}
+```
+
+Alternatively, if you need to maintain modularity, create separate utility classes for `text-opacity` and combine them using standard class names:
+
+```css
+.text-opacity-50 {
+  @apply opacity-50;
+}
+
+.custom-text-class {
+  @apply text-gray-500 text-opacity-50;
+}
+```
+
+This second approach works as expected because it does not rely on `@apply` for the opacity part of the style.
